@@ -1,5 +1,6 @@
-Distribution
-Distribution/**
+.idea
+Version
+Version/**
 Source/*.js
 !Source/index.js
 Source/*.md
