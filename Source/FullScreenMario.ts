@@ -298,7 +298,6 @@ module FullScreenMario {
          * to default, and the onGameStart mod trigger is fired.
          */
         gameStart(): void {
-            window.parent.postMessage({ event: 'test'}, "*");
             var FSM: FullScreenMario = FullScreenMario.prototype.ensureCorrectCaller(this);
 
             FSM.setMap(FSM.settings.maps.mapDefault, FSM.settings.maps.locationDefault);
@@ -383,7 +382,7 @@ module FullScreenMario {
             }
 
             FSM.ModAttacher.fireEvent("onGameOver");
-            window.parent.postMessage({ event: 'success'}, "*");
+            window.parent.postMessage({ event: 'levelComplete'}, "*");
         }
 
         /**
@@ -6622,7 +6621,7 @@ module FullScreenMario {
                     FSM);
             }
 
-            window.parent.postMessage({ event: 'error'}, "*");
+            window.parent.postMessage({ event: 'dead'}, "*");
         }
 
 
