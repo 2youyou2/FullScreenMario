@@ -8,10 +8,13 @@
   "main": "Dist/FullScreenMario.min.js",
   "license": "MIT",
   "ignore": [
-    "Source/**/.*",
+    "**/.*",
     "!Source/Sounds",
+    "!Source/Sounds/**",
+    "!Source/Sounds/**/*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"]
+    "tests"
+  ]
 }
