@@ -7,7 +7,7 @@
   ],
   "main": [
     "Dist/FullScreenMario.min.js",
-    "Gruntfile.js"
+    "Source"
   ],
   "license": "MIT",
   "ignore": [
