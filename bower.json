@@ -5,15 +5,6 @@
   "authors": [
     "rmallols <ricardo.mallols@gmail.com>"
   ],
-  "main": "**/*",
-  "license": "MIT",
-  "ignore": [
-    "!Source/Sounds",
-    "!Source/Sounds/**",
-    "!Source/Sounds/**/*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "main": ["Dist", "*.mp3"],
+  "license": "MIT"
 }
