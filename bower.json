@@ -5,6 +5,10 @@
   "authors": [
     "rmallols <ricardo.mallols@gmail.com>"
   ],
+  "main": [
+    "Dist/FullScreenMario.min.js",
+    "Gruntfile.js"
+  ],
   "license": "MIT",
   "ignore": [
     "!Source/Sounds",
