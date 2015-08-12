@@ -5,6 +5,6 @@
   "authors": [
     "rmallols <ricardo.mallols@gmail.com>"
   ],
-  "main": ["Dist", "*.mp3"],
+  "main": ["Dist/*.js", "Source/index.html"],
   "license": "MIT"
 }
