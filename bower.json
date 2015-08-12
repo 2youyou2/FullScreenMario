@@ -5,7 +5,7 @@
   "authors": [
     "rmallols <ricardo.mallols@gmail.com>"
   ],
-  "main": "**/.*",
+  "main": "**/*",
   "license": "MIT",
   "ignore": [
     "!Source/Sounds",
