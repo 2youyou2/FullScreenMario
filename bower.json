@@ -5,6 +5,12 @@
   "authors": [
     "rmallols <ricardo.mallols@gmail.com>"
   ],
-  "main": ["Dist/*.js", "Source/index.html"],
-  "license": "MIT"
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
