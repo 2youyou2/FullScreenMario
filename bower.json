@@ -6,8 +6,8 @@
     "rmallols <ricardo.mallols@gmail.com>"
   ],
   "main": [
-    "Dist/FullScreenMario.min.js",
-    "Source/Sounds/**/*"
+    "Dist",
+    "Source*"
   ],
   "license": "MIT",
   "ignore": [
