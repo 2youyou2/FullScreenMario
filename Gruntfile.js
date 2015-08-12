@@ -26,6 +26,9 @@ module.exports = function (grunt) {
         "copy": {
             "dist": {
                 "files": [{
+                    "src": "<%= meta.paths.source %>/index.html",
+                    "dest": "<%= meta.paths.dist %>/index.html"
+                },{
                     "src": "<%= meta.paths.source %>/<%= pkg.name %>.js",
                     "dest": "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>.js"
                 }, {
