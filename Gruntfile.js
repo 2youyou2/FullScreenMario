@@ -71,6 +71,11 @@ module.exports = function (grunt) {
                     "src": "settings/**",
                     "dest": "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/",
                     "expand": true
+                }, {
+                    "cwd": "<%= meta.paths.source %>/",
+                    "src": "Wrappers/**",
+                    "dest": "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/",
+                    "expand": true
                 }]
             }
         },
@@ -81,7 +86,8 @@ module.exports = function (grunt) {
             },
             "dist": {
                 "files": {
-                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>.min.js": ["<%= meta.paths.source %>/<%= pkg.name %>.js"]
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>.min.js": ["<%= meta.paths.source %>/<%= pkg.name %>.js"],
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/Wrappers/angularWrapper.min.js": ["<%= meta.paths.source %>/Wrappers/angularWrapper.js"]
                 }
             },
             "zip": {
@@ -90,7 +96,8 @@ module.exports = function (grunt) {
                         "<%= meta.paths.source %>/<%= pkg.name %>.js",
                         "<%= meta.paths.source %>/settings/*.js"
                     ],
-                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/index.min.js": ["<%= meta.paths.source %>/index.js"]
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/index.min.js": ["<%= meta.paths.source %>/index.js"],
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/Wrappers/angularWrapper.min.js": ["<%= meta.paths.source %>/Wrappers/angularWrapper.js"]
                 }
             }
         },
@@ -101,7 +108,8 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.min.js",
-                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/index.min.js"
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/index.min.js",
+                    "<%= meta.paths.version %>/<%= pkg.name %>-<%= pkg.version %>/Wrappers/angularWrapper.min.js"
                 ],
                 dest: "<%= meta.paths.dist %>/<%= pkg.name %>.min.js"
             }
