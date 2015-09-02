@@ -21,6 +21,7 @@ if(angular) {
                                 scope.onLevelComplete();
                                 break;
                         }
+                        scope.$apply();
                     });
                 }
             }
