@@ -1,38 +1,91 @@
-## FullScreenMario [![Build Status](https://travis-ci.org/FullScreenShenanigans/FullScreenMario.svg?branch=master)](https://travis-ci.org/FullScreenShenanigans/FullScreenMario)
+<style type="text/css">
+	table {
+		width: 100%;
+	}
+	
+	.method {
+		margin-top: 25px;
+		font-size: 20px;
+		padding: 5px;
+		background-color: #eee;
+		display: inline-block;
+	}
+	
+	.method-section {
+		margin-top: 25px;
+		font-size: 16px;
+		display: block;
+	}
 
-#### A free HTML5 remake of Nintendo's original Super Mario Bros, expanded for the modern web. It includes the original 32 levels, a random map generator, a level editor, and over a dozen custom mods.
+	.var-type {
+  		color: #fff;
+		padding: 1px 5px 2px 5px;
+		border-radius: 3px;
+	}
+	
+	.var-type-object {
+  		background-color: #aaa;
+	}
+	
+	.var-type-boolean {
+		background-color: #bbbb00;
+	}
+	
+	.var-type-string {
+ 		background-color: #00aaef;
+	}
+	
+	.var-type-all {
+		background-color: #dd0000;
+	}
+</style>
 
+# Captcha Mario
 
-## How to Play
+Captcha Mario is a fork project from [fullscreenmario.com](http://www.fullscreenmario.com), a free HTML5 remake of Nintendo's original Super Mario Bros, expanded for the modern web. It includes the original 32 levels, a random map generator, a level editor, and over a dozen custom mods.
 
-Although you may no longer play on [fullscreenmario.com](http://www.fullscreenmario.com), it is easy to play your own copy.
+Conceptually speaking, the reason behind Captcha Mario is to provide a funny way to validate that forms are being filled by actual users. It integrates an abstraction layer, written in AngularJs, to provide callback methods whenever relevant actions are triggered.
 
-#### Newcomers (non-coders)
+Please note this is NOT intended to be a serious project, so it's not suitable for production environments. Use it at your own risk :).
 
-[Download the latest release](https://github.com/FullScreenShenanigans/FullScreenMario/releases) of this project, extract that onto your computer, and open **index.html** in a browser (preferably Google Chrome). That's it!
+## Setup
 
-#### In your own site
+1 - Install Captcha mario using Bower
 
-Upload the latest release of FullScreenMario (or your built version) to your FTP server. 
+    bower install git@github.com:rmallols/FullScreenMario.git.
+	
+2 - Load the ```angularWrapper.js``` directive, located at ```Source/Wrappers```.
 
+3 - Include the ```captcha-mario``` AngularJs module as a dependency of your app.
 
-## Developing
+4 - Include the ```captcha-mario``` AngularJs directive, specifying any of the callbacks described below.
 
-#### Build Process
+## Wrapper callback methods
 
-FullScreenMario uses [Grunt](http://gruntjs.com/) to automate building, which requires [Node.js](http://node.js.org). The process is straightforward; see [Grunt's help page](http://gruntjs.com/getting-started).
+<label class="method">onDead()</label>
 
-#### Coding
+The user could be considered as a *not human*. 
 
-FullScreenMario is built on a modular framework called GameStartr. The [FullScreenShenanigans](https://github.com/FullScreenShenanigans/) organization contains GameStartr, its parent class EightBittr, and the modules used by the GameStartr framework. These all (theoretically) have their own README files, which you should skim before developing for FullScreenMario itself.
+The game is restarted.
 
-All source code is in the [Source](Source/) directory. See [Getting Started.md](Getting Started.md) for an in-depth guide on getting started programming with FullScreenMario.
+<label class="method-section">Parameters</label>
 
-The FullScreenMario.ts class declaration contains class functions and some constants, while static settings to be added to the FullScreenMario prototype, such as map layouts and object attributes, are stored in files under [Source/settings](Source/settings), such as audio.js and collisions.js.
+\-
 
+<span class="method-section">Returns</span>
 
-## Legal
+\-
 
-This is released under the [MIT License](http://mit-license.org/) (see [License.txt](LICENSE.txt)). 
+<label class="method">onLevelComplete()</label>
 
-The FullScreenMario project started October 21st, 2012. The initial beta release in October 2013 saw the [primary host website](http://www.fullscreenmario.com) receive approximately 2.68 million unique visitors within a month, after which Nintendo shut the site down with a DMCA complaint (no action was taken against the authors, GitHub, or other hosting websites). The coding project then underwent an extensive rewrite and architecture change to become a modular project centered on the GameStartr platform, followed by a complete conversion to TypeScript.
+Mario has completed the level. The user could be considered as a *human*.
+
+The game is ended.
+
+<label class="method-section">Parameters</label>
+
+\-
+
+<span class="method-section">Returns</span>
+
+\-
