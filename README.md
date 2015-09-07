@@ -6,8 +6,6 @@
 	.method {
 		margin-top: 25px;
 		font-size: 20px;
-		padding: 5px;
-		background-color: #eee;
 		display: inline-block;
 	}
 	
@@ -62,7 +60,7 @@ Please note this is NOT intended to be a serious project, so it's not suitable f
 
 ## Wrapper callback methods
 
-<label class="method">onDead()</label>
+<label class="method">`onDead()`</label>
 
 The user could be considered as a *not human*. 
 
@@ -76,7 +74,7 @@ The game is restarted.
 
 \-
 
-<label class="method">onLevelComplete()</label>
+<label class="method">`onLevelComplete()`</label>
 
 Mario has completed the level. The user could be considered as a *human*.
 
